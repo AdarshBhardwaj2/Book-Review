@@ -1,0 +1,157 @@
+html {
+  --s: 56px; /* control the size*/
+  --c1: #3fb8af;
+  --c2: #ff9e9d;
+
+  --_c1: var(--c1) 99%, #0000 101%;
+  --_c2: var(--c2) 99%, #0000 101%;
+
+  --r: calc(var(--s) * 0.866);
+  --g0: radial-gradient(var(--s), var(--_c1));
+  --g1: radial-gradient(var(--s), var(--_c2));
+  --f: radial-gradient(var(--s) at calc(100% + var(--r)) 50%, var(--_c1));
+  --p: radial-gradient(var(--s) at 100% 50%, var(--_c2));
+  background: var(--f) 0 calc(-5 * var(--s) / 2),
+    var(--f) calc(-2 * var(--r)) calc(var(--s) / 2),
+    var(--p) 0 calc(-2 * var(--s)), var(--g0) var(--r) calc(-5 * var(--s) / 2),
+    var(--g1) var(--r) calc(5 * var(--s) / 2),
+    radial-gradient(var(--s) at 100% 100%, var(--_c1)) 0 calc(-1 * var(--s)),
+    radial-gradient(var(--s) at 0% 50%, var(--_c1)) 0 calc(-4 * var(--s)),
+    var(--g1) calc(-1 * var(--r)) calc(-7 * var(--s) / 2),
+    var(--g0) calc(-1 * var(--r)) calc(-5 * var(--s) / 2),
+    var(--p) calc(-2 * var(--r)) var(--s),
+    var(--g0) calc(-1 * var(--r)) calc(var(--s) / 2),
+    var(--g1) calc(-1 * var(--r)) calc(var(--s) / -2),
+    var(--g0) 0 calc(-1 * var(--s)), var(--g1) var(--r) calc(var(--s) / -2),
+    var(--g0) var(--r) calc(var(--s) / 2) var(--c2);
+  background-size: calc(4 * var(--r)) calc(6 * var(--s));
+}
+/* General body styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-right: 15px;
+}
+
+/* Form container */
+.form-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form title */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
+}
+
+/* Form group (each input field container) */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Input labels */
+.form-group label {
+  display: block;
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Input fields */
+.form-group input,
+textarea {
+  width: 92%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f4f7f6;
+  transition: all 0.3s ease;
+
+  text-align: left; /* Ensure text alignment is on the left */
+  vertical-align: top; /* Start the text from the top */
+  resize: none;
+}
+
+textarea {
+  text-align: left; /* Ensure text alignment is on the left */
+  vertical-align: top; /* Start the text from the top */
+  resize: none;
+}
+
+/* Focus effect for input fields */
+.form-group input:focus,
+textarea:focus {
+  border-color: #3498db;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.view {
+  /* styles for anchor */
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  width: 94%;
+  text-align: center;
+  padding: 12px;
+  background-color: grey;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the submit button */
+.submit-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.view:hover {
+  background-color: #4b4c4d;
+  transform: translateY(-2px);
+}
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}

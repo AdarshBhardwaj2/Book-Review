@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+
+  <body>
+    <% for(let item of listItems){%>
+    <div class="box">
+      <div class="img">
+        <% if (item.coverurl) { %>
+
+        <img class="coverImg" src="<%= item.coverurl %>" alt="Book Cover" />
+        <% } else { %>
+        <p>No cover image available for this book.</p>
+        <% } %>
+      </div>
+      <div class="content">
+        <div class="heading">
+          <div class="title"><h1><%= item.name %></h1></div>
+          <div class="rating">Rating : <%= item.rating %></div>
+        </div>
+
+        <div class="desc"><%= item.description %></div>
+        <div class="deletePost">
+         <a href="/view/delete/<%= item.id %>" class="delete" data-id="<%= item.id %>">Delete Review</a>
+  
+</a>
+
+<a href="/view/update/<%= item.id %>" class="update" data-id="<%= item.id %>">
+  Update Review
+</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </body>
+</html>

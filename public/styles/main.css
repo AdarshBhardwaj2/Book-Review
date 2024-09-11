@@ -1,0 +1,113 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.box {
+  height: 40vh;
+  width: 70vw;
+  display: flex;
+  margin: 15px;
+}
+.box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.img {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coverImg {
+  display: block;
+  width: auto;
+  height: auto;
+}
+.content {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  font-size: larger;
+}
+.rating {
+  padding: 30px;
+  text-align: center;
+  font-weight: bolder;
+}
+.desc {
+  height: 75%;
+  width: 100%;
+}
+.deletePost {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+.delete {
+  /* styles for anchor */
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  width: 94%;
+  text-align: center;
+  padding: 16px;
+  margin: 10px;
+  background-color: grey;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.update {
+  /* styles for anchor */
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  width: 94%;
+  text-align: center;
+  padding: 16px;
+  margin: 10px;
+  background-color: grey;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the submit button */
+.delete:hover {
+  background-color: #4b4c4d;
+  transform: translateY(-2px);
+}
+.update:hover {
+  background-color: #4b4c4d;
+  transform: translateY(-2px);
+}
